@@ -10,8 +10,9 @@ for i in range(len(stuff)):
             thing_u_buy = stuff[i]
             buy = False
     else:
-        if thing_u_buy - stuff[i] >= d:
-            profit.append(thing_u_buy - stuff[i])
+        if stuff[i] - thing_u_buy >= d:
+            profit.append(stuff[i] - thing_u_buy)
+            thing_u_buy = stuff[i]
             buy = True
 
 print(sum(profit))
